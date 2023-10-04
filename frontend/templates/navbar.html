@@ -1,0 +1,23 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container-fluid" style="height: 70px;width: 90vw;">
+        {% url 'index' as index_url %}
+        <a class="navbar-brand {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}"><img src="{% static 'img/logo.svg' %}" alt="logo" class="logo-img" /></a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                {% url 'index' as index_url %}
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}">HOME</a></li>
+                {% url 'about' as about_url %}
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded {% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">ABOUT</a></li>
+                {% url 'faq' as faq_url %}
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded {% if request.path == faq_url %}active{% endif %}" href="{{ faq_url }}">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+

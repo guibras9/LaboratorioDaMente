@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="page-section d-flex text-black mb-0" id="about" style="overflow:hidden;padding: 2.5rem; min-height: 100%;">
+    <div class="maincontainer fluid" style="flex-direction: column;width: 100vw; align-items: center;justify-content: center;">
+      <!-- About Section Heading -->
+      <div class="title-container" style="margin-top:50px;">
+        <h1 class="page-section-heading text-center text-uppercase text-black mb-0"">About</h1>
+      </div>
+      <!-- About Section Content -->
+      <div style="padding-top: 3rem; padding-bottom: 1rem;padding-right: 3rem;">
+        <img src="{% static 'img/logo.svg' %}" >
+      </div>
+
+      <!-- More imgcontainer elements -->
+      <div class="row" style="justify-content: center; margin-top: 6rem; margin-bottom: 5rem; padding-top: 0px;">
+        <p class="lead text-black" style="width: 40%; text-align: left;font-family: montserrat;">
+          Welcome to Laboratório da Mente, a platform dedicated to helping individuals improve their mental well-being and unlock their full potential. We believe that every person has the ability to achieve their goals and live a fulfilling life, and we're here to provide the tools and resources to make that a reality.
+
+          Our platform offers a range of resources, including articles, videos, and courses, all designed to help you better understand your mind, manage your emotions, and build the skills you need to succeed. Our content is created by experts in psychology, neuroscience, personal development, nutrition, personal training, physiology, and then selected by us to provide you with the most reliable information.
+
+          At Laboratório da Mente, we believe in a holistic approach to self-improvement. That means taking care of your physical, emotional, and mental health, and recognizing the interconnectedness of these areas. We encourage our users to prioritize self-care and mindfulness, and to practice habits that promote overall well-being.
+
+          We're committed to providing a safe and supportive environment for all of our users. Our community is built on respect, empathy, and inclusivity, and we welcome individuals from all walks of life. Whether you're just starting out on your self-improvement journey or are looking for new ways to grow, we're here to support you every step of the way.
+
+          Thank you for choosing Laboratório da Mente as your partner in self-improvement. We're excited to join you on this journey of growth and discovery.
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+   
+<section class="page-section d-flex text-black mb-0" id="index" style="overflow:hidden;padding: 2.5rem; min-height: 100%;">
+    <div class="maincontainer fluid" style="flex-direction: column;width: 100vw; align-items: center;justify-content: center;">
+        <div uk-slideshow="autoplay=true; ratio: 7:2.8; animation: slide">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+        
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img src="{% static 'img/LANDIMAGE.jpg' %}" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/1.jpg' %}" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/2.gif' %}" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/3.jpg' %}" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="{% static 'img/4.jpg' %}" alt="" uk-cover>
+                    </li>
+                </ul>
+        
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
+            </div>
+        
+            <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+        
+        </div>
+        <!--video Section Heading-->
+        <div class="title-container" style=" margin-top: 10rem;">
+            <h1 class="page-section-heading text-center text-uppercase text-black mb-0">Videos and Courses</h1>
+        </div>
+
+        <!-- Video Grid Items-->
+        <div class="row align-items-center mx-auto" style="padding-top: 20px; max-width: fit-content; align-items: center;">
+            <div class="col my-3 mx-5  mb-3 align-items-center" style="padding-top: 20px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/thumbnails/1.png' %}" class="card-img-top" alt="1">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Intro to Psychology</h5>
+                        <p class="card-text text-black">In this article you will be able to watch a list of episodes introducing you to psychology</p>
+                        {% url 'video1' as video1_url %}
+                        <a href="{{video1_url}}" class="btn btn-secondary">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-3 mx-5 mb-3 align-items-center" style="padding-top: 20px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/thumbnails/2.png' %}" class="card-img-top" alt="2">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Training Periodisation</h5>
+                        <p class="card-text text-black">Training class that will teach you how to divide your training throughout the week... </p>
+                        {% url 'video2' as video2_url %}
+                        <a href="{{video2_url}}" class="btn btn-secondary">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-3 mx-5 mb-3 align-items-center" style="padding-top: 20px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/thumbnails/3.png' %}" class="card-img-top" alt="3">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Nutrition, Diet and Exercise</h5>
+                        <p class="card-text text-black">Podcast with Dr. Layne explaining diet and...
+                        </p>
+                        {% url 'video3' as video3_url %}
+                        <a href="{{video3_url}}" class="btn btn-secondary">Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mx-auto" style="padding-top: 20px; max-width: fit-content; align-items: center;">
+            <div class="col my-3 mx-5 mb-3 align-items-center" style="padding-top: 20px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/thumbnails/4.png' %}" class="card-img-top" alt="4">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Nutrition Science</h5>
+                        <p class="card-text text-black">2 hour class introducing you to nutrition and how to start your diet...</p>
+                        {% url 'video4' as video4_url %}
+                        <a href="{{video4_url}}" class="btn btn-secondary">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-3 mx-5 mb-3 align-items-center" style="padding-top: 20px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/thumbnails/5.png' %}" class="card-img-top" alt="5">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Hypertrophy or Strenght Training</h5>
+                        <p class="card-text text-black">Quick video explaining the difference between hypertrophy...</p>
+                        {% url 'video5' as video5_url %}
+                        <a href="{{video5_url}}" class="btn btn-secondary">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-3 mx-5 mb-3 align-items-center" style="padding-top: 20px;">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/thumbnails/6.png' %}" class="card-img-top" alt="6">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Progressive Overload</h5>
+                        <p class="card-text text-black">Video Explaining progressive overload and how to use it to get better results</p>
+                        {% url 'video6' as video6_url %}
+                        <a href="{{video6_url}}" class="btn btn-secondary">Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{%endblock%}
